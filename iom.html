@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact of Memes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/">
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #ffd700;
+        }
+
+        body {
+            position: relative;
+            background-color: #000;
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+        }
+
+        /* Header */
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 100px;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            color: #ffff;
+            letter-spacing: 2px;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .nav {
+            display: flex;
+        }
+
+        .nav li {
+            position: relative;
+            list-style: none;
+            margin: 0 20px;
+        }
+
+        .nav li a {
+            color: #ffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: 1px;
+            transition: 0.5s;
+            padding: 10px;
+        }
+
+        .nav li .nav-btn::after {
+            position: absolute;
+            content: "";
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 3px;
+            background: var(--primary);
+            width: 0;
+            transition: 0.5s;
+        }
+
+        .nav li .nav-btn:hover:after {
+            width: 50%;
+        }
+
+        .nav li .nav-btn:hover {
+            color: var(--primary);
+        }
+
+        .nav .nav-btn.active {
+            color: var(--primary);
+        }
+
+        .nav .nav-btn.active::after {
+            width: 50%;
+        }
+
+        .container h2 {
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
+
+        .impact-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .impact-section h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5em;
+            color: #ffd700;
+            margin-bottom: 20px;
+            text-shadow: 0 0 20px #ffd700;
+        }
+
+        .impact-category img {
+            max-width: 100%;
+            height: auto;
+            border: 3px solid #ffd700;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .impact-category h3 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .impact-category p {
+            color: #fff;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="./img/logo.png" class="logo">Museum</a>
+        <nav>
+            <ul class="nav">
+                <li>
+
+                    <a class="nav-btn active" href="/" onclick="openOverlay('/')">
+                        <ion-icon name="home-outline"></ion-icon> 
+                    </a>
+                </li>
+
+                <li><a class="nav-btn active" href="wtk.html">What to Know</a></li>
+                <li><a class="nav-btn" href="iom.html">Impact of Memes</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="ctgry">
+            <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+            <span class="number">5</span>
+        </a>
+        <a href="#" class="menu" onclick="toggleMenu()">
+            <ion-icon name="grid-outline"></ion-icon>
+        </a>
+    </header>
+
+    <section class="impact-section">
+        <div class="container">
+            <h2>Impact of Memes</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="impact-category">
+                        <img src="./img/social1.jpg" alt="Social Impact">
+                        <h3>Social</h3>
+                        <p>Memes have become an integral part of social media, influencing trends, humor, and online interactions.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="impact-category">
+                        <img src="./img/politics1.png" alt="Political Impact">
+                        <h3>Political</h3>
+                        <p>Memes have been used in political campaigns, to spread awareness, and to mobilize support or opposition.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="impact-category">
+                        <img src="./img/economy1.jpg" alt="Economic Impact">
+                        <h3>Economic</h3>
+                        <p>Memes can be used to advertise products, promote brands, and even influence consumer behavior.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="impact-category">
+                        <img src="./img/culture1.jpg" alt="Cultural Impact">
+                        <h3>Cultural</h3>
+                        <p>Memes often reflect and shape cultural trends, humor, and language.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="impact-category">
+                        <img src="./img/enviro1.png" alt="Environmental Impact">
+                        <h3>Environmental</h3>
+                        <p>Memes can be used to raise awareness about environmental issues and promote sustainable practices.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="impact-category">
+                        <img src="./img/others1.jpg" alt="Other Impacts">
+                        <h3>Others</h3>
+                        <p>Memes can impact various other areas, including technology, music, and education.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center bg-dark text-light py-3">
+        <p>&copy; 2024 Meme Museum. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

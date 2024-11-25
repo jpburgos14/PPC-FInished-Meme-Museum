@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Culture: Meme Evolution</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="./img/logo.png" class="logo">Museum</a>
+        <nav>
+            <ul class="nav">
+                <li>
+                    <a class="nav-btn active" href="/" onclick="openOverlay('/')">
+                        <ion-icon name="home-outline"></ion-icon>
+                    </a>
+                </li>
+                <li><a class="nav-btn" href="wtk.html">What to Know</a></li>
+                <li><a class="nav-btn" href="iom.html">Impact of Memes</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="ctgry">
+            <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+            <span class="number">5</span>
+        </a>
+        <a href="#" class="menu">
+            <ion-icon name="grid-outline"></ion-icon>
+        </a>
+    </header>
+    <section id="overlaySection" class="overlay-section" style="display: none;">
+        <div class="overlay-content">
+            <span class="close-overlay-btn" onclick="closeOverlay()">&times;</span>
+            <div id="overlayContentArea"></div>
+        </div>
+    </section>
+    <div class="banner container-fluid">
+        <div class="row d-flex align-items-center">
+            <div class="col-lg-5 col-md-12">
+                <div id="carouselIndicators" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="content">
+                                <h1>Meme Museum</h1>
+                                <h4>Social</h4>
+                                <p>Explore the evolution of social memes, from early image macros to today's viral
+                                    sensations.
+                                    Discover how social media has shaped meme culture and how these digital artifacts
+                                    reflect our
+                                    social interactions and shared experiences.</p>
+                                <a class="content-btn" href="#" onclick="openModal('socialModal')">View Gallery</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="content">
+                                <h1>Meme Museum</h1>
+                                <h4>Environmental</h4>
+                                <p>This exhibit showcases how memes raise awareness about environmental issues, advocate
+                                    for
+                                    sustainability, and inspire action.
+                                    From satirical commentary on pollution to poignant depictions of climate change, see
+                                    how memes
+                                    can be powerful tools for environmental advocacy.</p>
+                                <a class="content-btn" href="#" onclick="openModal('environmentalModal')">View
+                                    Gallery</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="content">
+                                <h1>Meme Museum</h1>
+                                <h4>Culture</h4>
+                                <p>Dive into the world of memes that reflect and shape our cultural landscape.
+                                    From pop culture references to internet trends, these memes provide a snapshot of
+                                    our
+                                    collective consciousness and the things that capture our attention.</p>
+                                <a class="content-btn" href="#" onclick="openModal('cultureModal')">View Gallery</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="content">
+                                <h1>Meme Museum</h1>
+                                <h4>Economy</h4>
+                                <p>Explore the intersection of memes and economics.
+                                    This exhibit examines how memes comment on economic trends, financial markets, and
+                                    wealth
+                                    disparity.
+                                    From "stonks" to cryptocurrency memes, see how humor and satire can shed light on
+                                    complex
+                                    economic issues.</p>
+                                <a class="content-btn" href="#" onclick="openModal('economyModal')">View Gallery</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="content">
+                                <h1>Meme Museum</h1>
+                                <h4>Politics</h4>
+                                <p>Memes have become a powerful force in the political arena, used to express political
+                                    views,
+                                    mobilize supporters, and even influence elections.
+                                    This exhibit explores the role of memes in political discourse, from satirical
+                                    commentary to
+                                    campaign propaganda.</p>
+                                <a class="content-btn" href="#" onclick="openModal('politicsModal')">View Gallery</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="content">
+                                <h1>Meme Museum</h1>
+                                <h4>Others</h4>
+                                <p>This category encompasses the vast and ever-evolving world of memes that defy
+                                    categorization.
+                                    From absurdist humor to niche internet communities, explore the diverse landscape of
+                                    memes
+                                    that reflect the creativity and ingenuity of online culture.</p>
+                                <a class="content-btn" href="#" onclick="openModal('othersModal')">View Gallery</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-12">
+                <div id="drag-container">
+                    <div id="spin-container">
+                        <img data-bs-target="#carouselIndicators" data-bs-slide-to="0" src="./img/meme2.gif"
+                            alt="Social Meme">
+                        <img data-bs-target="#carouselIndicators" data-bs-slide-to="1" src="./img/meme3.jpg"
+                            alt="Environmental Meme">
+                        <img data-bs-target="#carouselIndicators" data-bs-slide-to="2" src="./img/meme1.png"
+                            alt="Culture Meme">
+                        <img data-bs-target="#carouselIndicators" data-bs-slide-to="3" src="./img/meme5.png"
+                            alt="Economy Meme">
+                        <img data-bs-target="#carouselIndicators" data-bs-slide-to="4" src="./img/meme6.png"
+                            alt="Politics Meme">
+                        <img data-bs-target="#carouselIndicators" data-bs-slide-to="5" src="./img/meme4.png"
+                            alt="Other Meme">
+                        <h1>General Memes</h1>
+                    </div>
+                    <div id="ground"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="socialModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('socialModal')">&times;</span>
+            <h2>Social Memes</h2>
+            <ul>
+                <li>
+                    <h4>2000s-2010s</h4>
+                    <img class="modal-img" src="img/social1.jpg" alt="2000s-2010s Social Meme">
+                    <h5>Aldub</h5>
+                    <p>Aldub, a popular love team from the show Eat Bulaga, became a national sensation in the 2010s.
+                        They created numerous trends like the "Pabebe Wave," captivating audiences and dominating online
+                        discussions.</p>
+                </li>
+                <li>
+                    <h4>Present</h4>
+                    <img class="modal-img" src="img/social2.jpg" alt="Present Social Meme">
+                    <h5>Malupiton</h5>
+                    <p>Malupiton, a content creator, has revived the use of the word "Boss" through his skits and online
+                        presence.
+                        He has effectively become a meme himself, embodying the humor and trends of the current social
+                        media landscape.</p>
+                </li>
+                <li>
+                    <h4>Future</h4>
+                    <img class="modal-img" src="img/soccial3.png" alt="Future Social Meme">
+                    <h5>Digital Nomad</h5>
+                    <p>As remote work and digital nomadism rise, memes may capture the unique challenges and humorous
+                        situations faced by those who work from anywhere.
+                        This is especially relevant in the Philippines, with its scenic beauty and occasional
+                        infrastructure challenges.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="environmentalModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('environmentalModal')">&times;</span>
+            <h2>Environmental Memes</h2>
+            <ul>
+                <li>
+                    <h4>2000s-2010s</h4>
+                    <img class="modal-img" src="img/enviro1.png" alt="2000s-2010s Environmental Meme">
+                    <h5>Typhoon Ondoy</h5>
+                    <p>This image of Typhoon Ondoy became a meme, highlighting the resilience of Filipinos in overcoming
+                        the devastating effects of the storm.</p>
+                </li>
+                <li>
+                    <h4>Present</h4>
+                    <img class="modal-img" src="img/enviro2.png" alt="Present Environmental Meme">
+                    <h5>The Philippines: Where Even Shampoo comes in a tiny plastic packet.</h5>
+                    <p>This meme, originating from a Rappler Facebook post, highlights the prevalence of single-use
+                        plastics and sachets in the Philippines.
+                        It has sparked discussions about environmental impact and waste reduction.</p>
+                </li>
+                <li>
+                    <h4>Future</h4>
+                    <img class="modal-img" src="img/enviro3.png" alt="Future Environmental Meme">
+                    <h5>Climate Change is Real: #NewNormal</h5>
+                    <p>This meme reflects concerns about the potential consequences of climate change in the
+                        Philippines, where rising sea levels could lead to submerged streets and a "new normal" for
+                        Filipino roads.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="cultureModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('cultureModal')">&times;</span>
+            <h2>Culture Memes</h2>
+            <ul>
+                <li>
+                    <h4>2000s-2010s</h4>
+                    <img class="modal-img" src="img/culture1.jpg" alt="2000s-2010s Culture Meme">
+                    <h5>Jeprox Style</h5>
+                    <p>The "Jeprox" style, associated with hip-hop music and culture, gained popularity in the
+                        Philippines as a form of rebellious self-expression.
+                        It reflected the influence of Western trends and the desire of Filipino youth to express their
+                        identity through fashion and music.</p>
+                </li>
+                <li>
+                    <h4>Present</h4>
+                    <img class="modal-img" src="img/culture2.jpg" alt="Present Culture Meme">
+                    <h5>Boy Dila</h5>
+                    <p>This meme revolves around an incident during the Wattah Wattah Festival in San Juan City, where
+                        a content creator known as "Boy Dila" sprayed a passing motorcyclist with a water gun.
+                        The incident, captured on video, sparked online debate about public behavior and
+                        accountability.</p>
+                </li>
+                <li>
+                    <h4>Future</h4>
+                    <img class="modal-img" src="img/culture3.jpg" alt="Future Culture Meme">
+                    <h5>Culture Just a Nostalgia?</h5>
+                    <p>This meme expresses concerns about the potential fading of traditional Filipino cultural
+                        beliefs and practices in the future, suggesting they might become mere remnants of the past.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="economyModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('economyModal')">&times;</span>
+            <h2>Economy Memes</h2>
+            <ul>
+                <li>
+                    <h4>2000s-2010s</h4>
+                    <img class="modal-img" src="img/economy1.jpg" alt="2000s-2010s Economy Meme">
+                    <h5>Load Card: Text & Calls Promo</h5>
+                    <p>While not initially a meme, prepaid load cards for texting and calling have become a nostalgic
+                        symbol of the 2000s-2010s in the Philippines, representing a time when texting was a dominant
+                        form of communication.</p>
+                </li>
+                <li>
+                    <h4>Present</h4>
+                    <img class="modal-img" src="img/economy2.jpg" alt="Present Economy Meme">
+                    <h5>RC Cola Commercial</h5>
+                    <p>RC Cola's unique and quirky commercial, featuring a family with drinking glasses on their backs
+                        and RC Cola bottles for heads, has become a popular meme, praised for its creativity and
+                        humor.</p>
+                </li>
+                <li>
+                    <h4>Future</h4>
+                    <img class="modal-img" src="img/economy3.jpg" alt="Future Economy Meme">
+                    <h5>VR the Future?</h5>
+                    <p>This meme envisions a future where Filipinos have widely adopted virtual reality technology,
+                        potentially highlighting the country's embrace of technological advancements.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="politicsModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('politicsModal')">&times;</span>
+            <h2>Politics Memes</h2>
+            <ul>
+                <li>
+                    <h4>2000s-2010s</h4>
+                    <img class="modal-img" src="img/politics1.png" alt="2000s-2010s Politics Meme">
+                    <h5>Hello Garci</h5>
+                    <p>The "Hello Garci" scandal, involving alleged election rigging by former President Gloria
+                        Macapagal Arroyo, became a
+                        source of widespread memes and political satire in the Philippines.</p>
+                </li>
+                <li>
+                    <h4>Present</h4>
+                    <img class="modal-img" src="img/politics2.jpg" alt="Present Politics Meme">
+                    <h5>P***** Marcoses & Romualdez</h5>
+                    <p>This meme references recent political controversies involving Vice President Sara Duterte,
+                        former President Ferdinand "Bongbong" Marcos Jr., and First Lady Liza Romualdez, highlighting
+                        ongoing political tensions and discussions.</p>
+                </li>
+                <li>
+                    <h4>Future</h4>
+                    <img class="modal-img" src="img/politics3.jpg" alt="Future Politics Meme">
+                    <h5>The Senate Full of Artist</h5>
+                    <p>This meme satirizes the possibility of a future Philippine Senate dominated by former
+                        artists, potentially commenting on the intersection of entertainment and politics.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="othersModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('othersModal')">&times;</span>
+            <h2>Other Memes</h2>
+            <ul>
+                <li>
+                    <h4>2000s-2010s</h4>
+                    <img class="modal-img" src="img/others1.jpg" alt="2000s-2010s Other Meme">
+                    <h5>Jejemon Typings</h5>
+                    <p> "Jejemon"
+                        typings, characterized by excessive use of letters and symbols, emerged as a unique form of
+                        online communication in the Philippines, reflecting a playful approach to language and
+                        expression.</p>
+                </li>
+                <li>
+                    <h4>Present</h4>
+                    <img class="modal-img" src="img/others2.jpeg" alt="Present Other Meme">
+                    <h5>#Danas</h5>
+                    <p>The "#Danas" meme expresses empathy and shared struggles among Filipinos, finding humor and
+                        comfort in collective experiences and hardships.</p>
+                </li>
+                <li>
+                    <h4>Future</h4>
+                    <img class="modal-img" src="img/others3.png" alt="Future Other Meme">
+                    <h5>The era of Skibidi?</h5>
+                    <p>This meme speculates on the potential influence of current internet trends, such as the
+                        "Skibidi" meme, on
+                        future generations and online humor.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section>
+        <section id="exhibition" class="exhibition">
+            <div id="exhibition-title">
+                <h1>Exhibition</h1>
+            </div>
+            <div class="section-content container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="./img/meme1.png" alt="Exhibition Meme 1" class="exhibition-img img-fluid">
+                                <div class="content">
+                                    <h4>Impact of Social Media</h4>
+                                    <p>Explore how social media platforms have fueled the rapid spread and evolution of
+                                        memes,
+                                        shaping online humor and communication.</p>
+                                </div>
+                                <a href="#" class="content-btn">View Details</a>
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="./img/meme2.gif" alt="Exhibition Meme 2" class="exhibition-img img-fluid">
+                                <div class="content">
+                                    <h4>The Role of Humor</h4>
+                                    <p>Discover how memes use humor, satire, and irony to comment on social issues,
+                                        politics,
+                                        and everyday life.</p>
+                                </div>
+                                <a href="#" class="content-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img src="./img/meme3.jpg" alt="Exhibition Meme 3" class="exhibition-img img-fluid">
+                                <div class="content">
+                                    <h4>The Power of Visuals</h4>
+                                    <p>Examine how images, GIFs, and videos contribute to the impact and shareability of
+                                        memes, often conveying complex ideas in a simple and humorous way.</p>
+                                </div>
+                                <a href="#" class="content-btn">View Details</a>
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="./img/meme4.png" alt="Exhibition Meme 4" class="exhibition-img img-fluid">
+                                <div class="content">
+                                    <h4>Memes as Social Commentary</h4>
+                                    <p>Explore how memes serve as a form of social and political commentary, reflecting
+                                        current events and cultural trends.</p>
+                                </div>
+                                <a href="#" class="content-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="history" class="history">
+            <div id="history-title">
+                <h1>History</h1>
+            </div>
+            <div class="section-content container">
+                <h2>History of Memes</h2>
+                <p>Explore the fascinating history of memes, from their early origins to their current forms. Learn
+                    about the key milestones and trends that have shaped meme culture.</p>
+                <a href="#" class="content-btn">Learn More</a>
+            </div>
+        </section>
+        <section id="collection" class="collection">
+            <div id="collection-title">
+                <h1>Collection</h1>
+            </div>
+            <div class="section-content container">
+                <h2>Meme Collection</h2>
+                <p>Browse our extensive collection of memes, categorized by theme and time period. Discover rare and
+                    iconic memes that have captured the internet's attention.</p>
+                <a href="#" class="content-btn">Explore Collection</a>
+            </div>
+        </section>
+    </section>
+    <footer>
+        <p>&copy; 2024 Meme Museum. All rights reserved.</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/carousel.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
